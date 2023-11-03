@@ -1,4 +1,5 @@
 <template lang="">
+    <h2>Создать пост</h2>
     <form @submit.prevent>
         <my-input v-model="post.title" type="text" placeholder="Название"></my-input>
         <my-input v-model="post.body" type="text" placeholder="Описание"></my-input>
