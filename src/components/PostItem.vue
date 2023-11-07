@@ -1,6 +1,7 @@
 <template lang="">
     <div class="post">
         <div class="">
+            <div>{{ post.id }}</div>
             <div class="">Название: {{ post.title }}</div>
             <div class="">Описание: {{ post.body }}</div>
         </div>
