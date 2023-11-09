@@ -16,6 +16,10 @@ const routes = [
     {
         path: '/posts/:id',
         component: () => import('@/pages/PostIdPage')
+    },
+    {
+        path: '/store',
+        component: () => import('@/pages/PostPageWithStore')
     }
 ]
 
