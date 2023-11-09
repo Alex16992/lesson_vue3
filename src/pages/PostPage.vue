@@ -38,6 +38,7 @@ export default {
             limit: 10,
             totalPages: 0,
             sortOptions: [
+                {value: '', name: 'По ID'},
                 {value: 'title', name: 'По названию'},
                 {value: 'body', name: 'По содержимому'}
             ]
@@ -87,6 +88,8 @@ export default {
                 this.posts = [...this.posts, ...response.data]
             } catch (error) {
                 alert ('Ошибка')
+            } finally {
+                console.log(this.posts)
             }
         },
     },
@@ -114,10 +117,5 @@ export default {
         margin: 15px 0;
         display: flex;
         justify-content: space-between;
-    }
-
-    .observer {
-        height: 30px;
-        background: #000;
     }
 </style>

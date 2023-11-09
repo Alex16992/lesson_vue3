@@ -11,7 +11,7 @@
         <my-button
           @click="showDialog"
         >
-          Создать пользователя
+          Создать пост
         </my-button>
         <my-select
           :model-value="selectedSort"
@@ -31,19 +31,6 @@
       />
       <div v-else>Идет загрузка...</div>
       <div v-intersection="loadMorePosts" class="observer"></div>
-      <div class="page__wrapper">
-        <div
-          v-for="pageNumber in totalPages"
-          :key="pageNumber"
-          class="page"
-          :class="{
-                'current-page': page === pageNumber
-              }"
-          @click="changePage(pageNumber)"
-        >
-          {{ pageNumber }}
-        </div>
-      </div>
     </div>
   </template>
   
@@ -132,10 +119,5 @@
   }
   .current-page {
     border: 2px solid teal;
-  }
-  
-  .observer {
-    height: 30px;
-    background: green;
   }
   </style>
